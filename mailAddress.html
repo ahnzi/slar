@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WEB-CONSOLE | MAIL ADDRESS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-khaki">
+        <a class="navbar-brand" href="dashboard.html">SLAR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html"><span class="text-white">대시보드</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logs.html"><span class="text-white">로그</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="report.html"><span class="text-white">보고서</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="analysis.html"><span class="text-white">분석</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html"><span class="text-white">서비스</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailAddress.html"><span class="text-white">메일 주소</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fileHash.html"><span class="text-white">파일 해시</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><span class="text-white">계정 관리</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><span class="text-white">액세스 관리</span></a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <h2 class="container__title text-dark mb-4">💌 메일 주소 - 차단 목록 탭</h2>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">1. 발신자 입력란에 이메일 주소 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#noInputValueModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">2. 발신자 입력란에 이메일 형식이 아닌 값 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#invalidMailAddressModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">3. 이미 허용 목록에 등록되어 있는 발신자 형식의 이메일을 중복 등록 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#duplicateAllowMailAddressModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">4. 올바른 형식의 이일 주 및 메모 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#saveMailAddressPolicyModalKo">미리보기</button>
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">5. 수정 아이콘 클릭 후 내용 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modifyMailAddressPolicyModal">미리보기</button>
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">6. 수정 내용 정보 확인 알림창에서 확인 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modifyCompleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">7. 삭제 아이콘 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#deleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">8. 삭제 내용 정보 확인 알림창에서 확인 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#deleteCompleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">9. CSV 파일 업로드 성공 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#uploadCSVModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">10. CSV 파일 다운로드 아이콘 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#csvBlockMailAddressModal">미리보기</button>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <h2 class="container__title text-dark mb-4">💌 메일 주소 - 허용 목록 탭</h2>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">1. 발신자 및 수신자 입력란에 이메일 주소 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#noInputValueModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">2. 발신자 및 수신자 입력란에 이메일 형식이 아닌 값 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#invalidMailAddressModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">3. 이미 차단 목록에 등록되어 있는 발신자 형식의 이메일을 중복 등록 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#duplicateBlockMailAddressModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">4. 올바른 형식의 이일 주 및 메모 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#saveMailAddressPolicyModalKo">미리보기</button>
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">5. 수정 아이콘 클릭 후 내용 입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modifyMailAddressPolicyModal">미리보기</button>
+        </div>
+
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">6. 수정 내용 정보 확인 알림창에서 확인 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#modifyCompleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">7. 삭제 아이콘 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#deleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">8. 삭제 내용 정보 확인 알림창에서 확인 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#deleteCompleteMailAddressPolicyModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">9. CSV 파일 업로드 성공 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#uploadCSVModal">미리보기</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">10. CSV 파일 다운로드 아이콘 클릭 시 나타나는 알림창</h5>
+            <button type="button" class="btn btn-info mt-2" data-toggle="modal" data-target="#csvBlockMailAddressModal">미리보기</button>
+        </div>
+    </div>
+        
+    <!-- 1. 발신자 입력란에 입력 값 미입력 후 저장 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="noInputValueModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">이메일 주소를 입력해주세요.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발신자 입력란에 이메일 형식이 아닌 입력 값 입력 후 저장 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="invalidMailAddressModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">올바른 이메일 주소 형식이 아닙니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저장 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="saveMailAddressPolicyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">메일 주소 정책이 성공적으로 저장되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수정 버튼 클릭 후 저장 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="modifyMailAddressPolicyModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-primary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-primary">
+                    <div class="modal-body__icon">
+                        <i class="far fa-question-circle text-primary mt-5"></i>
+                    </div>
+                    <div class="modal-body__desc">  
+                        <span class="modal-body__desc-span mb-lg-1">선택한 메일 주소 정책을 수정하시겠습니까?</span>
+                        <span class="modal-body__desc-span">형식 : 형식</span>
+                        <span class="modal-body__desc-span">이메일 주소 : 이메일 주소</span>
+                        <span class="modal-body__desc-span">메모 : 메모</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수정 버튼 클릭 후 저장 버튼 클릭 시 나타나는 알림창에서 확인 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="modifyCompleteMailAddressPolicyModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">  
+                        <span class="modal-body__desc-span">선택한 메일 주소 정책이 성공적으로 수정되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 삭제 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="deleteMailAddressPolicyModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-primary">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-primary">
+                    <div class="modal-body__icon">
+                        <i class="far fa-question-circle text-primary mt-5"></i>
+                    </div>
+                    <div class="modal-body__desc">  
+                        <span class="modal-body__desc-span mb-lg-1">선택한 메일 주소 정책을 삭제하시겠습니까?</span>
+                        <span class="modal-body__desc-span">형식 : 형식</span>
+                        <span class="modal-body__desc-span">이메일 주소 : 이메일 주소</span>
+                        <span class="modal-body__desc-span">메모 : 메모</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 삭제 버튼 클릭 후 나타나는 알림창에서 확인 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="deleteCompleteMailAddressPolicyModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">  
+                        <span class="modal-body__desc-span">선택한 메일 주소 정책이 성공적으로 삭제되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CSV 파일 업로드 성공 시 나타나는 알림창 -->
+    <div class="modal fade" id="uploadCSVModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>CSV 파일 업로드가 성공적으로 완료되었습니다.</span>
+                        <span>✅ 등록 성공 : N개 ❌ 등록 실패 : M개 ❗️ 중복 등록 : L개</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- csv 파일 다운로드 버튼 클릭 시 나타나는 알림창 -->
+    <div class="modal fade" id="csvBlockMailAddressModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-primary">
+                    <div class="modal-body__icon">
+                        <i class="far fa-question-circle text-primary"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>CSV 내보내기(모든 필드)를 계속하시겠습니까?</span>
+                        <span>내보내기 시간은 데이터 양에 비례합니다.</span>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미 허용 목록에 등록되어 있는 발신자 형식의 이메일을 중복 등록 시 나타나는 알림창 -->
+    <div class="modal fade" id="duplicateAllowMailAddressModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>입력하신 이메일 주소는 이미 허용 목록에 등록되어 있습니다.</span>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 이미 차단 목록에 등록되어 있는 발신자 형식의 이메일을 중복 등록 시 나타나는 알림창 -->
+    <div class="modal fade" id="duplicateBlockMailAddressModal" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>입력하신 이메일 주소는 이미 차단 목록에 등록되어 있습니다.</span>
+                    </div>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b597afdaa1.js" crossorigin="anonymous"></script>
+</body>
+</html>

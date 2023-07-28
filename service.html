@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WEB-CONSOLE | Service</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-khaki">
+        <a class="navbar-brand" href="dashboard.html">SLAR</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="dashboard.html"><span class="text-white">대시보드</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="logs.html"><span class="text-white">로그</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="report.html"><span class="text-white">보고서</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="analysis.html"><span class="text-white">분석</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="service.html"><span class="text-white">서비스</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailAddress.html"><span class="text-white">메일 주소</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fileHash.html"><span class="text-white">파일 해시</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><span class="text-white">계정 관리</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><span class="text-white">액세스 관리</span></a>
+                </li>
+            </ul>
+        </div>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container-fluid mt-4">
+        <h2 class="container__title text-dark mb-4">🧑🏻‍🔧 SLE 서비스 - 도메인 목록 탭</h2>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">1. 도메인 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="enterDomainNameBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#enterDomainNameModalKo">한글</button>
+            <button type="button" id="enterDomainNameBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#enterDomainNameModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">2. HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="enterHELOHostNameBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#enterHELOHostNameModalKo">한글</button>
+            <button type="button" id="enterHELOHostNameBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#enterHELOHostNameModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">3. 발신 서버(안티-스팸 서버) 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="receivingFromBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#receivingFromModalKo">한글</button>
+            <button type="button" id="receivingFromBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#receivingFromModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">4. 발신 서버(안티-스팸 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="receivingFromInvalidServerTypeBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#receivingFromInvalidServerTypeModalKo">한글</button>
+            <button type="button" id="receivingFromInvalidServerTypeBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#receivingFromInvalidServerTypeModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">5. 수신 서버 (메일 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="sendingToInvalidServerTypeBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#sendingToInvalidServerTypeModalKo">한글</button>
+            <button type="button" id="sendingToInvalidServerTypeBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#sendingToInvalidServerTypeModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">6. 메일 도메인 설정 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="saveDomainConfigurationBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#saveDomainConfigurationModalKo">한글</button>
+            <button type="button" id="saveDomainConfigurationBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#saveDomainConfigurationModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">7. 메일 도메인 설정 수정 후 나타나는 알림창</h5>
+            <button type="button" id="modifyDomainConfigurationBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#modifyDomainConfigurationModalKo">한글</button>
+            <button type="button" id="modifyDomainConfigurationBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#modifyDomainConfigurationModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">8. 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="deleteConfirmDomainConfigurationBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#deleteConfirmDomainConfigurationModalKo">한글</button>
+            <button type="button" id="deleteConfirmDomainConfigurationBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#deleteConfirmDomainConfigurationModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-send-mail">9. 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창에서 확인 버튼 눌렀을 때 나타나는 알림창</h5>
+            <button type="button" id="deleteDomainConfigurationBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#deleteDomainConfigurationModalKo">한글</button>
+            <button type="button" id="deleteDomainConfigurationBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#deleteDomainConfigurationModalEn">영문</button>
+        </div>
+    </div>
+        
+    <!-- 도메인 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="enterDomainNameModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">도메인 명을 입력해주세요.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 도메인 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="enterDomainNameModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Please enter your domain name.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="enterHELOHostNameModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">HELO 호스트 명을 입력해주세요.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="enterHELOHostNameModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Please enter your HELO Host name.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발신 서버 (안티-스팸 서버) 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="receivingFromModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">최소 한 개의 발신 서버(안티-스팸 서버)를 설정해야 합니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발신 서버 (안티-스팸 서버) 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="receivingFromModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">At least 1 server must be configured to receive email.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발신 서버 (안티-스팸 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="receivingFromInvalidServerTypeModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">올바른 서버 형식이 아닙니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 발신 서버 (안티-스팸 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="receivingFromInvalidServerTypeModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Invalid server type.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수신 서버 (메일 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="sendingToInvalidServerTypeModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">올바른 서버 형식이 아닙니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 수신 서버 (메일 서버) 입력란에 올바른 서버 형식이 아닌 값 입력 후 "+" 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="sendingToInvalidServerTypeModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-warning">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Invalid server type.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="saveDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">도메인 설정이 성공적으로 완료되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="saveDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">The domain configuration has been successfully completed.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 수정 후 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="modifyDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">도메인 설정이 성공적으로 수정되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 수정 후 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="modifyDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Domain configuration has been successfully completed.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="deleteConfirmDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-primary">
+                    <div class="modal-body__icon">
+                        <i class="far fa-question-circle text-primary"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span mb-2">선택한 도메인 설정을 삭제하시겠습니까?</span>
+                        <h6 class="modal-body__desc-span mb-0">도메인 명 : test.seculetter.com</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="deleteConfirmDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-primary">
+                    <div class="modal-body__icon">
+                        <i class="far fa-question-circle text-primary"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span mb-2">Would you like to delete the settings for the specified domain?</span>
+                        <h6 class="modal-body__desc-span mb-0">Domain Name : test.seculetter.com</ㅗ>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창에서 확인 버튼을 눌렀을 때 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="deleteDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">도메인 설정이 성공적으로 삭제되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 메일 도메인 설정 삭제 버튼 클릭 시 나타나는 알림창에서 확인 버튼을 눌렀을 때 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="deleteDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Domain deletion completed successfully.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <h2 class="container__title text-dark mb-4">🧑🏻‍🔧 SLE 서비스 - 설정 탭</h2>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">1️⃣ 타임아웃 (분) 입력란에 올바른 값을 입력하지 않았을 때 나타나는 알림창</h5>
+            <button type="button" id="timeoutWrongNumberBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#timeoutWrongNumberModalKo">한글</button>
+            <button type="button" id="timeoutWrongNumberBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#timeoutWrongNumberModalEn">영문</button>
+        </div>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">2️⃣ 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="saveSleConfigurationBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#saveSleConfigurationModalKo">한글</button>
+            <button type="button" id="saveSleConfigurationBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#saveSleConfigurationModalEn">영문</button>
+        </div>
+    </div>
+
+    <!-- 타임아웃 (분) 입력란에 올바른 값을 입력하지 않았을 때 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="timeoutWrongNumberModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 설정 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">최소 1 이상의 숫자를 입력해야 합니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 타임아웃 (분) 입력란에 올바른 값을 입력하지 않았을 때 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="timeoutWrongNumberModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Configuration Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Min. 1 or higher number is required to be input for timeout section.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="saveSleConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 설정 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">SLE 서비스 설정이 성공적으로 저장되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="saveSleConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Configuration Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">SLE service settings have been saved successfully.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-4">
+        <h2 class="container__title text-dark mb-4">🆕 SLE 서비스 - 신규 개발 알림창</h2>
+        <div class="col-md-12 mb-5">
+            <h5 class="container__subtitle-enter-domain-name">1️⃣ 기본 URL 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+            <button type="button" id="baseUrlNoneSaveBtnKo" class="btn btn-primary mt-2" data-toggle="modal" data-target="#baseUrlNoneSaveModalKo">한글</button>
+            <button type="button" id="baseUrlNoneSaveBtnEn" class="btn btn-primary mt-2 ml-2" data-toggle="modal" data-target="#baseUrlNoneSaveModalEn">영문</button>
+        </div>
+    </div>
+
+    <!-- 기본 URL 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="baseUrlNoneSaveModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 설정 탭</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">기본 URL을 입력해주세요.</span>
+                    </div>
+                </div> 
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 기본 URL 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="baseUrlNoneSaveModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content border-success">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLE Service - Configuration Tap</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span class="modal-body__desc-span">Please enter Base URL.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b597afdaa1.js" crossorigin="anonymous"></script>
+</body>
+</html>
