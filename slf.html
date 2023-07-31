@@ -39,9 +39,10 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             서비스
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
                             <a class="nav-link text-dark" href="slf.html">SLF 서비스</a>
-                            <a class="nav-link text-dark" href="sle.html">SLE 서비스</a>
+                            <a class="nav-link text-dark" href="sleDomainList.html">SLE 서비스 - 도메인 목록</a>
+                            <a class="nav-link text-dark" href="sleSettings.html">SLE 서비스 - 설정</a>
                             <a class="nav-link text-dark" href="slweb.html">SLWEB 서비스</a>
                         </div>
                     </li>
@@ -908,6 +909,456 @@
                     </div>
                     <div class="modal-body__desc">
                         <span>Invalid "Benign File" path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 15. 올바르지 않은 오류 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidErrorFilePathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 오류 파일 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. 올바르지 않은 오류 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidErrorFilePathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid "Error File" path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. 올바르지 않은 무해화된 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidSanitizedFilePathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 무해화된 파일 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. 올바르지 않은 무해화된 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidSanitizedFilePathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid "Sanitized File" path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. 올바르지 않은 제거할 항목이 없는 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidNothingToRemovePathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 제거할 항목이 없는 파일 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. 올바르지 않은 제거할 항목이 없는 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidNothingToRemovePathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid file path for file with nothing to remove.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. 올바르지 않은 무해화 실패 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidFailSanitizedFilePathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 무해화 실패 파일 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. 올바르지 않은 무해화 실패 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidFailSanitizedFilePathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid path of CDR failure file.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. 올바르지 않은 악성 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidMaliciousFileResultPathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 악성 결과 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. 올바르지 않은 악성 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidMaliciousFileResultPathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid malicious result path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20. 올바르지 않은 정상 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidBenignFileResultPathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 정상 결과 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20. 올바르지 않은 정상 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidBenignFileResultPathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid benign result path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 21. 올바르지 않은 오류 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="invalidErrorFileResultPathModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>올바르지 않은 오류 결과 경로입니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 21. 올바르지 않은 오류 결과 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="invalidErrorFileResultPathModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Invalid error result path.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. 공유 폴더 설정 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="tryDeleteSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>선택한 SLF N 공유폴더 설정을 삭제하시겠습니까?</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 22. 공유 폴더 설정 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="tryDeleteSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-warning">
+                    <div class="modal-body__icon">
+                        <i class="fas fa-exclamation-circle text-warning"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>Would you like to delete the selected SLF N shared folder setting?</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 23. 공유 폴더 설정을 삭제했을 경우 나타나는 알림창 - 한글 -->
+    <div class="modal fade" id="deleteSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF 서비스</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>선택한 SLF N 공유폴더 설정이 삭제되었습니다.</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 23. 공유 폴더 설정을 삭제했을 경우 나타나는 알림창 - 영문 -->
+    <div class="modal fade" id="deleteSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SLF Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body__icon">
+                        <i class="far fa-check-circle text-success"></i>
+                    </div>
+                    <div class="modal-body__desc">
+                        <span>The selected SLF N shared folder setting has been deleted.</span>
                     </div>
                 </div>
                 <div class="modal-footer">

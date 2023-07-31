@@ -19,18 +19,6 @@
     font-size: 30px;
 }
 
-.modal-body__icon .fileHash {
-    display: flex;
-    height: 115px;
-}
-
-.modal-body__icon .fileHash i {
-    font-size: 30px;
-    align-items: center;
-    justify-content: center;
-}
-
-
 .modal-body__desc {
     font-size: 18px;
     font-weight: 500;

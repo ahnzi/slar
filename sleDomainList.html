@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEB-CONSOLE | 로그</title>
+    <title>WEB-CONSOLE | Service</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container">    
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="navigation.html">SLAR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,52 +95,62 @@
                 </ul>
             </div>
         </nav>
-            
+
         <div class="col-md-12 mt-4">
-            <h2 class="col-md-12 mb-4">로그</h2>
+            <h2 class="col-md-12 mb-4">SLE 서비스 - 도메인 목록</h2>
             <div class="col-md-12 mb-5">
-                <h5>1. 재전송 대상 이메일 미선택 후 이메일 재전송을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noSelectReleaseEmailModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noSelectReleaseEmailModalEn">영문</button>
+                <h5>1. 도메인 명 미입력 후 도메인 설정 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputDomainModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputDomainModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">2. 이메일 재전송을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryReleaseEmailModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryReleaseEmailModalEn">영문</button>
+                <h5>2. HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputHELOHostModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputHELOHostModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">3. 이메일 재전송 기능이 완료됐을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#releaseEmailModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#releaseEmailModalEn">영문</button>
+                <h5>3. 발신 서버 미입력 후 도메인 설정 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputReceivingFromModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputReceivingFromModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">4. 임의의 파일에 대한 파일 해시 정책을 저장했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#savePolicyFileHashModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#savePolicyFileHashModalEn">영문</button>
+                <h5>4. 올바르지 않은 발신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidReceivingFromModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidReceivingFromModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">5. 임의의 파일에 대한 파일 해시 정책 삭제를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeletePolicyFileHashModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeletePolicyFileHashModalEn">영문</button>
+                <h5>5. 올바르지 않은 수신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidSendingToModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidSendingToModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">6. 임의의 파일에 대한 파일 해시 정책을 삭제했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deletePolicyFileHashModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deletePolicyFileHashModalEn">영문</button>
+                <h5>6. 도메인 설정을 저장했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#saveDomainConfigurationModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#saveDomainConfigurationModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5 class="container__subtitle-sent-mail">7. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#exportCSVModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#exportCSVModalEn">영문</button>
+                <h5>7. 도메인 설정을 수정했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#modifyDomainConfigurationModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#modifyDomainConfigurationModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>8. 도메인 설정 삭제를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteDomainConfigurationModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteDomainConfigurationModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>9. 도메인 설정을 삭제했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteDomainConfigurationModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteDomainConfigurationModalEn">영문</button>
             </div>
         </div>
             
-        <!-- 1. 재전송 대상 이메일 미선택 후 이메일 재전송을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="noSelectReleaseEmailModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 1. 도메인 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputDomainModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content border-warning">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 이메일</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -150,7 +160,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="modal-body__desc-span">재전송할 이메일을 선택해주세요.</span>
+                            <span>도메인 명을 입력해주세요.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -160,12 +170,12 @@
             </div>
         </div>
 
-        <!-- 1. 재전송 대상 이메일 미선택 후 이메일 재전송을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="noSelectReleaseEmailModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 1. 도메인 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputDomainModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content border-warning">
+                <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - Email</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -175,7 +185,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="modal-body__desc-span">Please select email(s) to release.</span>
+                            <span>Please enter "Domain Name".</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -185,12 +195,312 @@
             </div>
         </div>
 
-        <!-- 2. 이메일 재전송을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryReleaseEmailModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 2. HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputHELOHostModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 이메일</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>HELO 호스트 명을 입력해주세요.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. HELO 호스트 명 미입력 후 저장 버튼 클릭 시 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputHELOHostModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Please enter "HELO Hostname".</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 발신 서버 미입력 후 도메인 설정 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputReceivingFromModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>발신 서버(안티-스팸 서버)를 입력해주세요.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 발신 서버 미입력 후 도메인 설정 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputReceivingFromModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Please enter "Receiving From" information (e.g. Anti-spam server).</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 올바르지 않은 발신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidReceivingFromModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>올바르지 않은 도메인 및 IP 주소입니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 올바르지 않은 발신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidReceivingFromModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Invalid domain or IP address.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 올바르지 않은 수신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidSendingToModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>올바르지 않은 도메인 및 IP 주소입니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 올바르지 않은 수신 서버를 입력 후 “+” 버튼을 클릭했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidSendingToModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Invalid domain or IP address.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 도메인 설정을 저장했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="saveDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>도메인 설정이 저장되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 도메인 설정을 저장했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="saveDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Domain setting has been saved.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 도메인 설정을 수정했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="modifyDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>선택한 도메인 설정이 수정되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 도메인 설정을 수정했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="modifyDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Domain setting has been updated.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. 도메인 설정 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeleteDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -200,166 +510,8 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>선택한 이메일을 재전송하시겠습니까?</span>
-                            <span>전송 시간은 이메일 양에 비례합니다.</span>
-                        </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. 이메일 재전송을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryReleaseEmailModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - Email</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon">
-                            <i class="far fa-question-circle text-primary"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Would you like to release selected emails?</span>
-                            <span>Transmission time is proportional to the amount of email.</span>
-                        </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. 이메일 재전송 기능이 완료됐을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="releaseEmailModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 이메일</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>이메일 재전송 기능이 완료되었습니다.</span>
-                            <span>재전송 완료 이메일 개수 : N개 / 재전송 실패 이메일 개수 : M개</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. 이메일 재전송 기능이 완료됐을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="releaseEmailModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - Email</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Email(s) has been released.</span>
-                            <span>No. of released email : N / No. of email failed to release : M</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. 임의의 파일에 대한 파일 해시 정책을 저장했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="savePolicyFileHashModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 파일</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>선택한 파일에 대한 파일 해시 정책이 저장되었습니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 4. 임의의 파일에 대한 파일 해시 정책을 저장했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="savePolicyFileHashModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - Email</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>The file hash policy for the selected file has been saved.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 5. 임의의 파일에 대한 파일 해시 정책 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryDeletePolicyFileHashModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 파일</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon custom-mt-23">
-                            <i class="far fa-question-circle text-primary"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>선택한 파일 해시 정책을 삭제하시겠습니까?</span>
-                            <span>정책 : 정책</span>
-                            <span>해시값 : 해시값</span>
-                            <span>메모 : 메모</span>
+                            <span>선택한 도메인 설정을 삭제하시겠습니까?</span>
+                            <span>도메인 명 : 도메인 명</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -370,25 +522,23 @@
             </div>
         </div>
 
-        <!-- 5. 임의의 파일에 대한 파일 해시 정책 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryDeletePolicyFileHashModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 8. 도메인 설정 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeleteDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - File</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon custom-mt-23">
+                        <div class="modal-body__icon">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>Would you like to delete the selected file hash policy?</span>
-                            <span>Policy : Policy</span>
-                            <span>Hash : Hash</span>
-                            <span>Description : Description</span>
+                            <span>Would you like to delete the selected domain settings?</span>
+                            <span>Domain Name: Domain Name</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -399,12 +549,12 @@
             </div>
         </div>
 
-        <!-- 6. 임의의 파일에 대한 파일 해시 정책을 삭제했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="deletePolicyFileHashModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 9. 도메인 설정을 삭제했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deleteDomainConfigurationModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그 - 파일</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE 서비스 - 도메인 목록</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -414,7 +564,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>선택한 파일 해시 정책이 삭제되었습니다.</span>
+                            <span>선택한 도메인 설정이 삭제되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -424,12 +574,12 @@
             </div>
         </div>
 
-        <!-- 6. 임의의 파일에 대한 파일 해시 정책을 삭제했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="deletePolicyFileHashModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 9. 도메인 설정을 삭제했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deleteDomainConfigurationModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs - Email</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">SLE Service - Domain List</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -439,7 +589,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>The selected file hash policy has been deleted.</span>
+                            <span>The selected domain setting has been deleted.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -449,61 +599,6 @@
             </div>
         </div>
 
-        <!-- 7. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="exportCSVModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">로그</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
-                            <i class="far fa-question-circle text-primary"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>CSV 내보내기(모든 필드)를 계속하시겠습니까?</span>
-                            <span>내보내기 시간은 데이터 양에 비례합니다.</span>
-                            <span>(CSV 내보내기가 진행되는 동안 다른 작업을 수행할 수 있습니다.)</span>
-                        </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 7. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="exportCSVModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Logs</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
-                            <i class="far fa-question-circle text-primary"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Would you like to continue CSV export (All fields)?</span>
-                            <span>Export time is proportional to the amount of data.</span>
-                            <span>(You can do other tasks while the CSV export is in progress.)</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
