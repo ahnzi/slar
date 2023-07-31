@@ -30,6 +30,9 @@
                         <a class="nav-link" href="logs.html">로그</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="analysisResult.html">분석 상세 결과</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="report.html">보고서</a>
                     </li>
                     <li class="nav-item">
@@ -100,8 +103,8 @@
             <h2 class="col-md-12 mb-4">SLF 서비스</h2>
             <div class="col-md-12 mb-5">
                 <h5>1. 공유폴더 설정 생성을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryCreateSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryCreateSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryCreateSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryCreateSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>2. 공유폴더 설정이 생성됐을 경우 나타나는 알림창</h5>
@@ -140,23 +143,23 @@
             </div>
             <div class="col-md-12 mb-5">
                 <h5>9. 공유 폴더 서버 설정을 저장했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#saveSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#saveSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#saveSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#saveSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>10. 공유 폴더 서버 연결을 실패했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#failConnectSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#failConnectSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#failConnectSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#failConnectSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>11. 공유 폴더 서버 연결을 성공했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#connectSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#connectSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#connectSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#connectSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>12. 공유 폴더 서버 연결을 해제했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#disconnectSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#disconnectSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#disconnectSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#disconnectSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>13. 올바르지 않은 악성 파일 경로를 입력 후 공유 폴더 설정 저장을 시도했을 경우 나타나는 알림창</h5>
@@ -205,18 +208,18 @@
             </div>
             <div class="col-md-12 mb-5">
                 <h5>22. 공유 폴더 설정 삭제를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteSlfModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
                 <h5>23. 공유 폴더 설정을 삭제했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteSlfServiceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteSlfServiceModalEn">영문</button>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteSlfModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteSlfModalEn">영문</button>
             </div>
         </div>
 
         <!-- 1. 공유폴더 설정 생성을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryCreateSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="tryCreateSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -242,7 +245,7 @@
         </div>
 
         <!-- 1. 공유폴더 설정 생성을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryCreateSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="tryCreateSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -268,7 +271,7 @@
         </div>
 
         <!-- 2. 공유폴더 설정이 생성됐을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="createSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="createSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -293,7 +296,7 @@
         </div>
 
         <!-- 2. 공유폴더 설정이 생성됐을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="createSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="createSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -618,7 +621,7 @@
         </div>
 
         <!-- 9. 공유 폴더 서버 설정을 저장했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="saveSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="saveSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -643,7 +646,7 @@
         </div>
 
         <!-- 9. 공유 폴더 서버 설정을 저장했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="saveSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="saveSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -668,7 +671,7 @@
         </div>
 
         <!-- 10. 공유 폴더 서버 연결을 실패했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="failConnectSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="failConnectSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -693,7 +696,7 @@
         </div>
 
         <!-- 10. 공유 폴더 서버 연결을 실패했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="failConnectSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="failConnectSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -719,7 +722,7 @@
     </div>
 
     <!-- 11. 공유 폴더 서버 연결을 성공했을 경우 나타나는 알림창 - 한글 -->
-    <div class="modal fade" id="connectSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="connectSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -744,7 +747,7 @@
     </div>
 
     <!-- 11. 공유 폴더 서버 연결을 성공했을 경우 나타나는 알림창 - 영문 -->
-    <div class="modal fade" id="connectSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="connectSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -769,7 +772,7 @@
     </div>
 
     <!-- 12. 공유 폴더 서버 연결을 해제했을 경우 나타나는 알림창 - 한글 -->
-    <div class="modal fade" id="disconnectSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="disconnectSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -794,7 +797,7 @@
     </div>
 
     <!-- 12. 공유 폴더 서버 연결을 해제했을 경우 나타나는 알림창 - 영문 -->
-    <div class="modal fade" id="disconnectSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="disconnectSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1269,7 +1272,7 @@
     </div>
 
     <!-- 22. 공유 폴더 설정 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
-    <div class="modal fade" id="tryDeleteSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="tryDeleteSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1294,7 +1297,7 @@
     </div>
 
     <!-- 22. 공유 폴더 설정 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
-    <div class="modal fade" id="tryDeleteSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="tryDeleteSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1319,7 +1322,7 @@
     </div>
 
     <!-- 23. 공유 폴더 설정을 삭제했을 경우 나타나는 알림창 - 한글 -->
-    <div class="modal fade" id="deleteSlfServiceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteSlfModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
@@ -1344,7 +1347,7 @@
     </div>
 
     <!-- 23. 공유 폴더 설정을 삭제했을 경우 나타나는 알림창 - 영문 -->
-    <div class="modal fade" id="deleteSlfServiceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="deleteSlfModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
