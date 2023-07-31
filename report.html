@@ -30,6 +30,9 @@
                         <a class="nav-link" href="logs.html">로그</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="analysisResult.html">분석 상세 결과</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="report.html">보고서</a>
                     </li>
                     <li class="nav-item">
@@ -39,9 +42,10 @@
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             서비스
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
                             <a class="nav-link text-dark" href="slf.html">SLF 서비스</a>
-                            <a class="nav-link text-dark" href="sle.html">SLE 서비스</a>
+                            <a class="nav-link text-dark" href="sleDomainList.html">SLE 서비스 - 도메인 목록</a>
+                            <a class="nav-link text-dark" href="sleSettings.html">SLE 서비스 - 설정</a>
                             <a class="nav-link text-dark" href="slweb.html">SLWEB 서비스</a>
                         </div>
                     </li>
@@ -129,7 +133,6 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
                     </div>
                 </div>
@@ -152,7 +155,7 @@
                             </div>
                             <div class="modal-body__desc">
                                 <span>Invalid date range.</span>
-                                <span>You can set it to 90 days or less.</span>
+                                <span>The date range can be set to less than 31 days.</span>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -177,7 +180,7 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>시큐레터 월간 보고서를 생성하시겠습니까?</span>
+                            <span>보고서를 인쇄 혹은 PDF로 저장히시겠습니까?</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -203,7 +206,7 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="modal-body__desc-span">Do you want to create SecuLetter monthly report as an image?</span>
+                            <span class="modal-body__desc-span">Would you like to print a report or save as PDF?</span>
                         </div>
                     </div>
                     <div class="modal-footer">
