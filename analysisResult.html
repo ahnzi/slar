@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SLAR | 네비게이션</title>
+    <title>WEB-CONSOLE | 분석 상세 결과</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -98,132 +98,37 @@
                 </ul>
             </div>
         </nav>
-    
+            
         <div class="col-md-12 mt-4">
-            <h2 class="col-md-12 mb-4">네비게이션</h2>
+            <h2 class="col-md-12 mb-4">분석 상세 결과</h2>
             <div class="col-md-12 mb-5">
-                <h5>1. 검색 아이콘 클릭 후 해시값 또는 요청 ID 미입력 상태에서 검색을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputHashTxIdModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputHashTxIdModalEn">영문</button>
+                <h5>1. 분석이 완료된 악성 파일 다운로드를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#downloadMaliciousFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#downloadMaliciousFileModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>2. 검색 아이콘 클릭 후 올바르지 않은 해시값 또는 올바르지 않은 요청 ID 입력 후 검색을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidHashTxIdModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidHashTxIdModalEn">영문</button>
+                <h5>2. 분석이 완료된 악성 파일을 zip으로 다운로드 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#downloadMaliciousFileZipModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#downloadMaliciousFileZipModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>3. 로그아웃을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#logoutModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#logoutModalEn">영문</button>
+                <h5>3. 분석이 완료된 무해화된 파일을 다운로드 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#downloadSanitizedFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#downloadSanitizedFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>4. 분석이 완료된 무해화된 파일을 zip으로 다운로드 시도했을 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#downloadSanitizedFileZipModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#downloadSanitizedFileZipModalEn">영문</button>
             </div>
         </div>
             
-        <!-- 1. 검색 아이콘 클릭 후 해시값 또는 요청 ID 미입력 상태에서 검색을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="noInputHashTxIdModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="noInputHashTxIdModalLabel" aria-hidden="true">
+        <!-- 1. 분석이 완료된 악성 파일 다운로드를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="downloadMaliciousFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="noInputHashTxIdModalLabel">검색</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>해시값 또는 요청 ID를 입력해주세요.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 1. 검색 아이콘 클릭 후 해시값 또는 요청 ID 미입력 상태에서 검색을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="noInputHashTxIdModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="noInputHashTxIdModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="noInputHashTxIdModalLabel">Search</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Please enter the hash value or request ID.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. 검색 아이콘 클릭 후 올바르지 않은 해시값 또는 올바르지 않은 요청 ID 입력 후 검색을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="invalidHashTxIdModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="invalidHashTxIdModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="invalidHashTxIdModalLabel">검색</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>올바르지 않은 해시값 또는 요청 ID입니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. 검색 아이콘 클릭 후 올바르지 않은 해시값 또는 올바르지 않은 요청 ID 입력 후 검색을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="invalidHashTxIdModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="invalidHashTxIdModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="invalidHashTxIdModalLabel">Search</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Invalid hash value or Invalid request ID.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 3. 로그아웃을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="logoutModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="logoutModalLabel">로그아웃</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">분석 상세 결과</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -233,7 +138,7 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>로그아웃 하시겠습니까?</span>
+                            <span>분석이 완료된 파일을 다운로드 하시겠습니까?</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -244,12 +149,12 @@
             </div>
         </div>
 
-        <!-- 3. 로그아웃을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="logoutModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <!-- 1. 분석이 완료된 악성 파일 다운로드를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="downloadMaliciousFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Analysis Result</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -259,16 +164,173 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>Would you like to logout?</span>
+                            <span>Would you like to download the analyzed file?</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button> 
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- 2. 분석이 완료된 악성 파일을 zip으로 다운로드 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="downloadMaliciousFileZipModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">분석 상세 결과</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>분석이 완료된 파일을 압축하여 다운로드 하시겠습니까?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 분석이 완료된 악성 파일을 zip으로 다운로드 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="downloadMaliciousFileZipModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Analysis Result</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Would you like to compress & download the analyzed file?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 분석이 완료된 무해화된 파일을 다운로드 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="downloadSanitizedFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">분석 상세 결과</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>분석이 완료된 무해화 된 파일을 다운로드 하시겠습니까?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 분석이 완료된 무해화된 파일을 다운로드 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="downloadSanitizedFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Analysis Result</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Would you like to download analyzed and sanitized file?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 분석이 완료된 무해화된 파일을 zip으로 다운로드 시도했을 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="downloadSanitizedFileZipModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">분석 상세 결과</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>분석이 완료된 무해화 된 파일을 압축하여 다운로드 하시겠습니까?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 분석이 완료된 무해화된 파일을 zip으로 다운로드 시도했을 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="downloadSanitizedFileZipModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Analysis Result</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Would you like to compress & download analyzed and sanitized file?</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
