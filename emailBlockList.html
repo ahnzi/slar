@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>WEB-CONSOLE | SLWEB 서비스</title>
+    <title>WEB-CONSOLE | EMAIL BLOCK LIST</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">    
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="navigation.html">SLAR</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,75 +100,70 @@
         </nav>
 
         <div class="col-md-12 mt-4">
-            <h2 class="col-md-12 mb-4">SLWEB 서비스</h2>
+            <h2 class="col-md-12 mb-4">메일 주소 - 차단 목록 탭</h2>
             <div class="col-md-12 mb-5">
-                <h5>1. SLWEB 미설정 상태에서 중지 혹은 실행을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noSlwebSettingModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noSlwebSettingModalEn">영문</button>
+                <h5>1. 이메일 주소 미입력 후 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>2. 네트워크 인터페이스 미선택 후 저장을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#notSelectNetworkInterfaceModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#notSelectNetworkInterfaceModalEn">영문</button>
+                <h5>2. 올바르지 않은 이메일 주소 입력 후 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>3. SLWEB 설정을 저장했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#saveSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#saveSlwebModalEn">영문</button>
+                <h5>3. 이미 허용 목록에 등록되어 있는 발신자 형식의 이메일 주소를 차단 목록에 중복으로 등록했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#duplicateEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#duplicateEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>4. 올바르지 않은 필터 입력 후 SLWEB 서비스 실행을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidFilterModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidFilterModalEn">영문</button>
+                <h5>4. 메일 주소 정책 설정을 저장했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#savePolicyEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#savePolicyEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>5. 올바르지 않은 필터 입력 후 SLWEB 서비스를 실행했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#runIncludeInvalidFilterModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#runIncludeInvalidFilterModalEn">영문</button>
+                <h5>5. 메일 주소 정책 수정을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryModifyPolicyEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryModifyPolicyEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>6. SLWEB 서비스를 실행했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#runSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#runSlwebModalEn">영문</button>
+                <h5>6. 메일 주소 정책을 수정했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#modifyPolicyEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#modifyPolicyEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>7. SLWEB 서비스가 실행중인 상태에서 네트워크 인터페이스 및 필터 변경을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#modifyNetworkInterfaceFilterModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#modifyNetworkInterfaceFilterModalEn">영문</button>
+                <h5>7. 메일 주소 정책 삭제를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeletePolicyEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeletePolicyEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>8. SLWEB 서비스가 실행중인 상태에서 SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteRunningSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteRunningSlwebModalEn">영문</button>
+                <h5>8. 메일 주소 정책을 삭제했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deletePolicyEmailAddressModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deletePolicyEmailAddressModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>9. SLWEB 서비스 중지를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryStopSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryStopSlwebModalEn">영문</button>
+                <h5>9. CSV 파일 업로드를 실패했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#failUploadCSVModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#failUploadCSVModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>10. SLWEB 서비스를 중지했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#stopSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#stopSlwebModalEn">영문</button>
+                <h5>10. CSV 파일 업로드를 성공했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#uploadCSVModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#uploadCSVModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>11. SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteSlwebModalEn">영문</button>
-            </div>
-            <div class="col-md-12 mb-5">
-                <h5>12. SLWEB 서비스를 삭제했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteSlwebModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteSlwebModalEn">영문</button>
+                <h5>11. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#downloadCSVModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#downloadCSVModalEn">영문</button>
             </div>
         </div>
-            
-        <!-- 1. SLWEB 미설정 상태에서 중지 혹은 실행을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="noSlwebSettingModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         
+        <!-- 1. 이메일 주소 미입력 후 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -178,7 +173,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>SLWEB 서비스 설정 완료 후 상태를 변경할 수 있습니다.</span>
+                            <span>이메일 주소를 입력해주세요.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -188,37 +183,12 @@
             </div>
         </div>
 
-        <!-- 1. SLWEB 미설정 상태에서 중지 혹은 실행을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="noSlwebSettingModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 1. 이메일 주소 미입력 후 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>You can change the status after completing the SLWEB service setting.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 2. 네트워크 인터페이스 미선택 후 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="notSelectNetworkInterfaceModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -228,7 +198,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>네트워크 인터페이스를 선택해주세요.</span>
+                            <span>Please enter the email address.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -238,12 +208,12 @@
             </div>
         </div>
 
-        <!-- 2. 네트워크 인터페이스 미선택 후 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="notSelectNetworkInterfaceModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 2. 올바르지 않은 이메일 주소 입력 후 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -253,22 +223,99 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>Please select the network interface.</span>
+                            <span>올바르지 않은 이메일 주소입니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 3. SLWEB 설정을 저장했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="saveSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 2. 올바르지 않은 이메일 주소 입력 후 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Invalid email address.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 이미 허용 목록에 등록되어 있는 발신자 형식의 이메일 주소를 차단 목록에 중복으로 등록했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="duplicateEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">이미 동일한 이메일 주소가 허용 목록에 등록되어 있습니다.</span>
+                            <span class="small">이메일 주소 : 이메일 주소</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. 이미 허용 목록에 등록되어 있는 발신자 형식의 이메일 주소를 차단 목록에 중복으로 등록했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="duplicateEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Identical email address is already registered in the allow list.</span>
+                            <span class="small">Email Address : Email Address</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 메일 주소 정책 설정을 저장했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="savePolicyEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -278,7 +325,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>SLWEB 서비스 설정이 저장되었습니다.</span>
+                            <span>이메일 주소 정보가 저장되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -288,12 +335,12 @@
             </div>
         </div>
 
-        <!-- 3. SLWEB 설정을 저장했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="saveSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 4. 메일 주소 정책 설정을 저장했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="savePolicyEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -303,34 +350,35 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>SLWEB service setting has been saved.</span>
+                            <span>Email address information has been saved.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 4. 올바르지 않은 필터 입력 후 SLWEB 서비스 실행을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="invalidFilterModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 5. 메일 주소 정책 수정을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryModifyPolicyEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-4">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="mb-1">SLWEB 서비스를 실행하시겠습니까?</span>
-                            <span class="small">네트워크 인터페이스 : 네트워크 인터페이스 명</span>
-                            <span class="small">필터 : 필터 명</span>
+                            <span class="mb-1">선택한 이메일 주소 정보를 수정하시겠습니까?</span>
+                            <span class="small">형식 : 형식</span>
+                            <span class="small">이메일 주소 : 이메일 주소</span>
+                            <span class="small">메모 : 메모</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -341,24 +389,25 @@
             </div>
         </div>
 
-        <!-- 4. 올바르지 않은 필터 입력 후 SLWEB 서비스 실행을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="invalidFilterModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 5. 메일 주소 정책 수정을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryModifyPolicyEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-4">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="mb-1">Would you like to run the SLWEB service?</span>
-                            <span class="small">Network interface : Network interface name</span>
-                            <span class="small">Filter : Filter name</span>
+                            <span class="mb-1">Would you like to modify the selected email address information?</span>
+                            <span class="small">Format : Format</span>
+                            <span class="small">Email Address : Email Address</span>
+                            <span class="small">Description : Description</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -369,62 +418,12 @@
             </div>
         </div>
 
-        <!-- 5. 올바르지 않은 필터 입력 후 SLWEB 서비스를 실행했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="runIncludeInvalidFilterModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 6. 메일 주소 정책을 수정했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="modifyPolicyEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>올바르지 않은 필터 형식입니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 5. 올바르지 않은 필터 입력 후 SLWEB 서비스를 실행했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="runIncludeInvalidFilterModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc">
-                            <span>Invalid filter format.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 6. SLWEB 서비스를 실행했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="runSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -434,7 +433,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>SLWEB 서비스가 실행되었습니다.</span>
+                            <span class="mb-1">선택한 이메일 주소 정보가 수정되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -444,12 +443,12 @@
             </div>
         </div>
 
-        <!-- 6. SLWEB 서비스를 실행했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="runSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 6. 메일 주소 정책을 수정했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="modifyPolicyEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -459,7 +458,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>SLWEB service has been executed.</span>
+                            <span>The selected email address information has been updated.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -469,124 +468,25 @@
             </div>
         </div>
 
-        <!-- 7. SLWEB 서비스가 실행중인 상태에서 네트워크 인터페이스 및 필터 변경을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="modifyNetworkInterfaceFilterModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 7. 메일 주소 정책 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeletePolicyEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB 서비스 실행중에는 SLWEB 서비스 설정 값을 변경할 수 없습니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 7. SLWEB 서비스가 실행중인 상태에서 네트워크 인터페이스 및 필터 변경을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="modifyNetworkInterfaceFilterModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>You cannot change the SLWEB service settings while running the SLWEB service.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 8. SLWEB 서비스가 실행중인 상태에서 SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryDeleteRunningSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB 서비스 실행중에는 SLWEB 서비스 설정을 삭제할 수 없습니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 8. SLWEB 서비스가 실행중인 상태에서 SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryDeleteRunningSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-warning">
-                        <div class="modal-body__icon">
-                            <i class="fas fa-exclamation-circle text-warning"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>You cannot delete the SLWEB service setting while running the SLWEB service.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 9. SLWEB 서비스 중지를 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryStopSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-4">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span class="mb-1">SLWEB 서비스를 중지하시겠습니까?</span>
-                            <span class="small">네트워크 인터페이스 : 네트워크 인터페이스 명</span>
-                            <span class="small">필터 : 필터 명</span>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">선택한 이메일 주소 정보를 삭제하시겠습니까?</span>
+                            <span class="small">형식 : 형식</span>
+                            <span class="small">이메일 주소 : 이메일 주소</span>
+                            <span class="small">메모 : 메모</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -597,24 +497,25 @@
             </div>
         </div>
 
-        <!-- 9. SLWEB 서비스 중지를 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryStopSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 7. 메일 주소 정책 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeletePolicyEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-4">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span class="mb-1">Would you like to stop the SLWEB service?</span>
-                            <span class="small">Network interface : Network interface name</span>
-                            <span class="small">Filter : Filter name</span>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Would you like to delete the selected email address information?</span>
+                            <span class="small">Format : Format</span>
+                            <span class="small">Email Address : Email Address</span>
+                            <span class="small">Description : Description</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -625,12 +526,12 @@
             </div>
         </div>
 
-        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="stopSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 8. 메일 주소 정책을 삭제했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deletePolicyEmailAddressModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -639,8 +540,8 @@
                         <div class="modal-body__icon">
                             <i class="far fa-check-circle text-success"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB 서비스가 중지되었습니다.</span>
+                        <div class="modal-body__desc">
+                            <span>선택한 이메일 주소 정보가 삭제되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -650,12 +551,12 @@
             </div>
         </div>
 
-        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="stopSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 8. 메일 주소 정책을 삭제했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deletePolicyEmailAddressModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -664,8 +565,8 @@
                         <div class="modal-body__icon">
                             <i class="far fa-check-circle text-success"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB service has been stopped.</span>
+                        <div class="modal-body__desc">
+                            <span>The selected email address information has been deleted.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -675,24 +576,125 @@
             </div>
         </div>
 
-        <!-- 11. SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="tryDeleteSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 9. CSV 파일 업로드를 실패했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="failUploadCSVModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>최대 250개의 이메일 주소 정보를 등록할 수 있습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. CSV 파일 업로드를 실패했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="failUploadCSVModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Max 250 email address information can be uploaded.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. CSV 파일 업로드를 성공했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="uploadCSVModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">CSV 파일 업로드가 완료되었습니다.</span>
+                            <span class="small">등록 성공 : N개 / 등록 실패 : M개 / 중복 등록 : K개</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. CSV 파일 업로드를 성공했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="uploadCSVModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">CSV file upload has been completed.</span>
+                            <span class="small">No. of registration : N / No. of Failure : M / No. of Duplicate Registration : K</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="downloadCSVModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">메일 주소</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-1">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span class="mb-1">SLWEB 서비스 설정을 삭제하시겠습니까?</span>
-                            <span class="small">네트워크 인터페이스 : 네트워크 인터페이스 명</span>
-                            <span class="small">필터 : 필터 명</span>
+                        <div class="modal-body__desc">
+                            <span>CSV 내보내기(모든 필드)를 계속하시겠습니까?</span>
+                            <span>내보내기 시간은 데이터 양에 비례합니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -703,24 +705,23 @@
             </div>
         </div>
 
-        <!-- 11. SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="tryDeleteSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 11. CSV 파일 다운로드를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="downloadCSVModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Mail Address</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body border-top border-bottom border-primary">
-                        <div class="modal-body__icon mt-3">
+                        <div class="modal-body__icon mt-1">
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
-                        <div class="modal-body__desc ml-5">
-                            <span class="mb-1">Would you like to delete the SLWEB Service Setting?</span>
-                            <span class="small">Network interface : Network interface name</span>
-                            <span class="small">Filter : Filter name</span>
+                        <div class="modal-body__desc">
+                            <span>Would you like to continue CSV export?</span>
+                            <span>Export time is proportional to the amount of data.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -731,55 +732,6 @@
             </div>
         </div>
 
-        <!-- 12. SLWEB 서비스를 삭제했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="deleteSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB 서비스 설정이 삭제되었습니다.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="deleteSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body border-top border-bottom border-success">
-                        <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
-                        </div>
-                        <div class="modal-body__desc ml-5">
-                            <span>SLWEB service setting has been deleted.</span>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
