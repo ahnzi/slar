@@ -147,7 +147,7 @@
                 <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryStopSlwebModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>10. SLWEB 서비스가 중지됐을 경우 나타나는 알림창</h5>
+                <h5>10. SLWEB 서비스를 중지했을 경우 나타나는 알림창</h5>
                 <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#stopSlwebModalKo">한글</button>
                 <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#stopSlwebModalEn">영문</button>
             </div>
@@ -560,6 +560,218 @@
                         </div>
                         <div class="modal-body__desc ml-5">
                             <span>You cannot delete the SLWEB service setting while running the SLWEB service.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. SLWEB 서비스 중지를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryStopSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-3">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">SLWEB 서비스를 중지하시겠습니까?</span>
+                            <span class="small">네트워크 인터페이스 : 네트워크 인터페이스 명</span>
+                            <span class="small">필터 : 필터 명</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. SLWEB 서비스 중지를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryStopSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-3">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">Would you like to stop the SLWEB service?</span>
+                            <span class="small">Network interface : Network interface name</span>
+                            <span class="small">Filter : Filter name</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="stopSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span>SLWEB 서비스가 중지되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="stopSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span>SLWEB service has been stopped.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeleteSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-3">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">SLWEB 서비스 설정을 삭제하시겠습니까?</span>
+                            <span class="small">네트워크 인터페이스 : 네트워크 인터페이스 명</span>
+                            <span class="small">필터 : 필터 명</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. SLWEB 서비스 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeleteSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-3">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">Would you like to delete the SLWEB Service Setting?</span>
+                            <span class="small">Network interface : Network interface name</span>
+                            <span class="small">Filter : Filter name</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12. SLWEB 서비스를 삭제했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deleteSlwebModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB 서비스</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span>SLWEB 서비스 설정이 삭제되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. SLWEB 서비스를 중지했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deleteSlwebModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">SLWEB Service</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span>SLWEB service setting has been deleted.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
