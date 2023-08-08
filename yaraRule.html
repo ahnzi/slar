@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WEB-CONSOLE | YARA RULE</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="navigation.html">SLAR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="navigation.html">네비게이션</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">대시보드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logs.html">로그</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysisResult.html">분석 상세 결과</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">보고서</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.html">분석</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            서비스
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="slf.html">SLF 서비스</a>
+                            <a class="nav-link text-dark" href="sleDomainList.html">SLE 서비스 - 도메인 목록</a>
+                            <a class="nav-link text-dark" href="sleSettings.html">SLE 서비스 - 설정</a>
+                            <a class="nav-link text-dark" href="slweb.html">SLWEB 서비스</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            정책
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="emailBlockList.html">메일 주소 - 차단 목록</a>
+                            <a class="nav-link text-dark" href="emailAllowList.html">메일 주소 - 허용 목록</a>
+                            <a class="nav-link text-dark" href="fileHashBlockList.html">파일 해시 - 차단 목록</a>
+                            <a class="nav-link text-dark" href="fileHashAllowList.html">파일 해시 - 허용 목록</a>
+                            <a class="nav-link text-dark" href="fileContent.html">파일 내용</a>
+                            <a class="nav-link text-dark" href="yaraRule.html">YARA 규칙</a>
+                            <a class="nav-link text-dark" href="yaraExecutionPlan.html">YARA 실행 계획</a>
+                            <a class="nav-link text-dark" href="executableFile.html">실행 파일</a>
+                            <a class="nav-link text-dark" href="passwordProtected.html">암호화 파일</a>
+                            <a class="nav-link text-dark" href="passwordProtected.html">URL 분석</a>
+                            <a class="nav-link text-dark" href="cdr.html">무해화</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            시스템
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="apiKey.html">API Key</a>
+                            <a class="nav-link text-dark" href="accessControl.html">접근 제어</a>
+                            <a class="nav-link text-dark" href="notificationServer.html">알림 - 서버</a>
+                            <a class="nav-link text-dark" href="notificationTemplate.html">알림 - 템플릿</a>
+                            <a class="nav-link text-dark" href="notificationRecipient.html">알림 - 수신자</a>
+                            <a class="nav-link text-dark" href="syslog.html">Syslog</a>
+                            <a class="nav-link text-dark" href="diskCleanDataBackup.html">디스크 클린 & 데이터 백업</a>
+                            <a class="nav-link text-dark" href="update.html">업데이트</a>
+                            <a class="nav-link text-dark" href="supportTool.html">지원 도구</a>
+                            <a class="nav-link text-dark" href="auditLog.html">감사 로그</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            계정 관리
+                        </a>
+                        <div class="dropdown-menu w-300" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="user.html">계정 관리</a>
+                            <a class="nav-link text-dark" href="accessManagement.html">액세스 관리</a>    
+                            <a class="nav-link text-dark" href="tenant.html">테넌트 관리 - 테넌트</a>
+                            <a class="nav-link text-dark" href="tenantAdmin.html">테넌트 관리 - 테넌트 관리자 계정</a>
+                            <a class="nav-link text-dark" href="tenantAccessControl.html">테넌트 관리 - 테넌트 접근 제어</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col-md-12 mt-4">
+            <h2 class="col-md-12 mb-4">YARA - YARA 규칙</h2>
+            <div class="col-md-12 mb-5">
+                <h5>1. 업로드 버튼 클릭 후 .yar 확장자가 아닌 파일 드래그 앤 드롭 시 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidFileExtensionModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidFileExtensionModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>2. YARA 규칙 파일 업로드를 성공했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#uploadYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#uploadYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>3. YARA 규칙 파일 중복 등록을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#duplicateYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#duplicateYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>4. YARA 규칙 파일을 수정했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#modifyYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#modifyYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>5. YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>6. YARA 규칙 파일을 삭제했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>7. YARA 실행 계획에서 사용 중인 YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteUsingYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteUsingYaraRuleFileModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>8. YARA 규칙 이름 미입력 후 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputYaraRuleNameModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputYaraRuleNameModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>9. YARA 규칙 본문 미입력 후 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputYaraRuleContentModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputYaraRuleContentModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>10. YARA 규칙 파일을 생성했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#createYaraRuleFileModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#createYaraRuleFileModalEn">영문</button>
+            </div>
+        </div>
+         
+        <!-- 1. 업로드 버튼 클릭 후 .yar 확장자가 아닌 파일 드래그 앤 드롭 시 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidFileExtensionModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>".yar" 확장자가 아닌 파일은 업로드 할 수 없습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. 업로드 버튼 클릭 후 .yar 확장자가 아닌 파일 드래그 앤 드롭 시 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidFileExtensionModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>File that is not ".yar" cannot be uploaded.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. YARA 규칙 파일 업로드를 성공했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="uploadYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA 규칙 파일 업로드가 완료되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. YARA 규칙 파일 업로드를 성공했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="uploadYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Uplodaing YARA rule file has been completed.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. YARA 규칙 파일 중복 등록을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="duplicateYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">이미 동일한 YARA 규칙 파일이 등록되어 있습니다.</span>
+                            <span class="small">YARA 규칙 파일 : YARA 규칙 파일 이름</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. YARA 규칙 파일 중복 등록을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="duplicateYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Identical YARA rule file is already registered.</span>
+                            <span class="small">YARA Rule File : YARA Rule File name</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. YARA 규칙 파일을 수정했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="modifyYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA 규칙 파일이 수정되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. YARA 규칙 파일을 수정했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="modifyYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA rules file has been updated.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeleteYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">선택한 YARA 규칙 파일을 삭제하시겠습니까?</span>
+                            <span class="small">YARA 규칙 파일 : YARA 규칙 파일 이름</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeleteYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-primary">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-question-circle text-primary"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Would you like to delete the selected YARA rule file?</span>
+                            <span class="small">YARA Rule File : YARA Rule File name</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+        <!-- 6. YARA 규칙 파일을 삭제했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deleteYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>선택한 YARA 규칙 파일이 삭제되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. YARA 규칙 파일을 삭제했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deleteYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>The selected YARA rule file has been deleted.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. YARA 실행 계획에서 사용 중인 YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeleteUsingYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">YARA 실행 계획에서 사용중인 YARA 규칙 파일은 삭제할 수 없습니다.</span>
+                            <span class="small">YARA 실행 규칙 : YARA 실행 규칙 이름</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. YARA 실행 계획에서 사용 중인 YARA 규칙 파일 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeleteUsingYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc ml-5">
+                            <span class="mb-1">The YARA rules files in use in the YARA execution plan cannot be deleted.</span>
+                            <span class="small">YARA Run Rules : YARA Rules Rules name</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. YARA 규칙 본문 미입력 후 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputYaraRuleContentModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA 규칙 본문을 입력해주세요.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. YARA 규칙 본문 미입력 후 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputYaraRuleContentModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Please enter the YARA rule content.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. YARA 규칙 파일을 생성했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="createYaraRuleFileModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA 규칙 파일이 생성되었습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. YARA 규칙 파일을 생성했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="createYaraRuleFileModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">YARA</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>YARA rule file has been created.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b597afdaa1.js" crossorigin="anonymous"></script>
+</body>
+</html>
