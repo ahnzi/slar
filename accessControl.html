@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SLAR | API Key</title>
+    <title>SLAR | 접근 제어</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -101,45 +101,60 @@
         </nav>
 
         <div class="col-md-12 mt-4">
-            <h2 class="col-md-12 mb-4">API Key</h2>
+            <h2 class="col-md-12 mb-4">접근 제어</h2>
             <div class="col-md-12 mb-5">
-                <h5>1. API Key를 생성하지 않고 저장을 시도했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noCreateApiKeyModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noCreateApiKeyModalEn">영문</button>
+                <h5>1. 호스트(IP)를 입력하지 않고 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noInputHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noInputHostIPModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>2. API Key를 생성했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#createApiKeyModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#createApiKeyModalEn">영문</button>
+                <h5>2. 올바르지 않은 호스트(IP)를 입력한 다음 저장을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidHostIPModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>3. 클립보드에 API Key가 복사됐을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#copyApiKeyModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#copyApiKeyModalEn">영문</button>
+                <h5>3. 접근 제어 설정을 저장했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#saveAccessControlModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#saveAccessControlModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>4. API Key를 수정했을 경우 나타나는 알림창</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#modifyApiKeyModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#modifyApiKeyModalEn">영문</button>
+                <h5>4. 호스트(IP) 중복 등록을 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#duplicateHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#duplicateHostIPModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>5. API Key 정보 삭제를 시도했을 경우 나타나는 경우</h5>
-                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteApiKeyModalKo">한글</button>
-                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteApiKeyModalEn">영문</button>
+                <h5>5. 호스트(IP) 접근을 비활성화 했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deactivatedHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deactivatedHostIPModalEn">영문</button>
             </div>
             <div class="col-md-12 mb-5">
-                <h5>6. API Key 정보를 삭제했을 경우 나타나는 알림창</h5>
+                <h5>6. 호스트(IP) 접근을 활성화 했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#activatedHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#activatedHostIPModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>7. 호스트(IP) 정보를 수정했을 경우 나타나는 알림창</h5>
                 <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteApiKeyModalKo">한글</button>
                 <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteApiKeyModalEn">영문</button>
             </div>
+            <div class="col-md-12 mb-5">
+                <h5>8. 호스트(IP) 정보 삭제를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#tryDeleteHostIPKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#tryDeleteHostIPEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>9. 호스트(IP) 정보를 삭제했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#deleteHostIPModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#deleteHostIPModalEn">영문</button>
+            </div>
         </div>
 
-        <!-- 1. API Key를 생성하지 않고 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="noCreateApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 1. 호스트(IP)를 입력하지 않고 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noInputHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -149,7 +164,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key를 생성해주세요.</span>
+                            <span>호스트(IP)를 입력해주세요.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -159,12 +174,12 @@
             </div>
         </div>
 
-        <!-- 1. API Key를 생성하지 않고 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="noCreateApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 1. 호스트(IP)를 입력하지 않고 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noInputHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -174,7 +189,7 @@
                             <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>Please create an API Key.</span>
+                            <span>Please enter "Host (IP)".</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -184,22 +199,22 @@
             </div>
         </div>
 
-        <!-- 2. API Key를 생성했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="createApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 2. 올바르지 않은 호스트(IP)를 입력한 다음 저장을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body border-top border-bottom border-warning">
                         <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
+                            <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key 정보가 저장되었습니다.</span>
+                            <span>올바르지 않은 호스트(IP)입니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -209,22 +224,22 @@
             </div>
         </div>
 
-        <!-- 2. API Key를 생성했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="createApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 2. 올바르지 않은 호스트(IP)를 입력한 다음 저장을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body border-top border-bottom border-success">
+                    <div class="modal-body border-top border-bottom border-warning">
                         <div class="modal-body__icon">
-                            <i class="far fa-check-circle text-success"></i>
+                            <i class="fas fa-exclamation-circle text-warning"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key information has been saved.</span>
+                            <span>Invalid "Host (IP)".</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -234,12 +249,12 @@
             </div>
         </div>
 
-        <!-- 3. 클립보드에 API Key가 복사됐을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="copyApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 3. 접근 제어 설정을 저장했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="saveAccessControlModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -249,7 +264,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key가 클립보드에 복사되었습니다.</span>
+                            <span>접근 제어 정보가 저장되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -259,12 +274,12 @@
             </div>
         </div>
 
-        <!-- 3. 클립보드에 API Key가 복사됐을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="copyApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 3. 접근 제어 설정을 저장했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="saveAccessControlModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -274,7 +289,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key has been copied to the clipboard.</span>
+                            <span>Access control information has been saved.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -284,12 +299,168 @@
             </div>
         </div>
 
-        <!-- 4. API Key를 수정했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="modifyApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 4. 호스트(IP) 중복 등록을 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="duplicateHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">이미 동일한 호스트(IP)가 등록되어 있습니다.</span>
+                            <span class="small">호스트(IP) : 호스트(IP) 값</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. 호스트(IP) 중복 등록을 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="duplicateHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Identical host (IP) is already registered.</span>
+                            <span class="small">Host (IP) : Host (IP) value</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 호스트(IP) 접근을 비활성화 했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deactivatedHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">선택한 호스트(IP)에 대한 접근이 비활성화되었습니다.</span>
+                            <span class="small">호스트(IP) : 호스트(IP) 값</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. 호스트(IP) 접근을 비활성화 했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deactivatedHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">The access to the selected host (IP) has been "Deactivated".</span>
+                            <span class="small">Host (IP) : Host (IP) value</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 호스트(IP) 접근을 활성화 했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="activatedHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">선택한 호스트(IP)에 대한 접근이 활성화되었습니다.</span>
+                            <span class="small">호스트(IP) : 호스트(IP) 값</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. 호스트(IP) 접근을 활성화 했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="activatedHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-success">
+                        <div class="modal-body__icon mt-1">
+                            <i class="far fa-check-circle text-success"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">The access to the selected host (IP) has been "Activated".</span>
+                            <span class="small">Host (IP) : Host (IP) value</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. 호스트(IP) 정보를 수정했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deleteApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -299,22 +470,22 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key 정보가 수정되었습니다.</span>
+                            <span>선택한 호스트(IP) 정보가 수정되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 4. API Key를 수정했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="modifyApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 7. 호스트(IP) 정보를 수정했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deleteApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -324,7 +495,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>API Key information has been updated.</span>
+                            <span>The selected host (IP) information has been updated.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -334,12 +505,12 @@
             </div>
         </div>
 
-        <!-- 5. API Key 정보 삭제를 시도했을 경우 나타나는 경우 - 한글 -->
-        <div class="modal fade" id="tryDeleteApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 8. 호스트(IP) 정보 삭제를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="tryDeleteHostIPKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -349,8 +520,8 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="mb-1">선택한 API Key 정보를 삭제하시겠습니까?</span>
-                            <span class="small">API Key : API Key 값</span>
+                            <span class="mb-1">선택한 호스트(IP) 정보를 삭제하시겠습니까?</span>
+                            <span class="small">호스트(IP) : 호스트(IP) 값</span>
                             <span class="small">메모 : 메모</span>
                         </div>
                     </div>
@@ -362,12 +533,12 @@
             </div>
         </div>
 
-        <!-- 5. API Key 정보 삭제를 시도했을 경우 나타나는 경우 - 영문 -->
-        <div class="modal fade" id="tryDeleteApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 8. 호스트(IP) 정보 삭제를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="tryDeleteHostIPEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -377,8 +548,8 @@
                             <i class="far fa-question-circle text-primary"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span class="mb-1">Would you like to delete the selected API Key information?</span>
-                            <span class="small">API Key : API Key value</span>
+                            <span class="mb-1">Would you like to delete the selected host (IP) information?</span>
+                            <span class="small">Host (IP) : Host (IP)</span>
                             <span class="small">Description : Description</span>
                         </div>
                     </div>
@@ -390,12 +561,12 @@
             </div>
         </div>
 
-        <!-- 6. API Key 정보를 삭제했을 경우 나타나는 알림창 - 한글 -->
-        <div class="modal fade" id="deleteApiKeyModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 9. 호스트(IP) 정보를 삭제했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="deleteHostIPModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">접근 제어</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -405,22 +576,22 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>선택한 API Key 정보가 삭제되었습니다.</span>
+                            <span>선택한 호스트(IP) 정보가 삭제되었습니다.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 6. API Key 정보를 삭제했을 경우 나타나는 알림창 - 영문 -->
-        <div class="modal fade" id="deleteApiKeyModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <!-- 9. 호스트(IP) 정보를 삭제했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="deleteHostIPModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">API Key</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Access Control</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -430,7 +601,7 @@
                             <i class="far fa-check-circle text-success"></i>
                         </div>
                         <div class="modal-body__desc">
-                            <span>The selected API Key information has been deleted.</span>
+                            <span>The selected host (IP) information has been deleted.</span>
                         </div>
                     </div>
                     <div class="modal-footer">
