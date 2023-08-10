@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SLAR | 지원 도구</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="navigation.html">SLAR</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="navigation.html">네비게이션</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">로그인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">대시보드</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logs.html">로그</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysisResult.html">분석 상세 결과</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">보고서</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="analysis.html">분석</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            서비스
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="slf.html">SLF 서비스</a>
+                            <a class="nav-link text-dark" href="sleDomainList.html">SLE 서비스 - 도메인 목록</a>
+                            <a class="nav-link text-dark" href="sleSettings.html">SLE 서비스 - 설정</a>
+                            <a class="nav-link text-dark" href="slweb.html">SLWEB 서비스</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            정책
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="emailBlockList.html">메일 주소 - 차단 목록</a>
+                            <a class="nav-link text-dark" href="emailAllowList.html">메일 주소 - 허용 목록</a>
+                            <a class="nav-link text-dark" href="fileHashBlockList.html">파일 해시 - 차단 목록</a>
+                            <a class="nav-link text-dark" href="fileHashAllowList.html">파일 해시 - 허용 목록</a>
+                            <a class="nav-link text-dark" href="fileContent.html">파일 내용</a>
+                            <a class="nav-link text-dark" href="yaraRule.html">YARA 규칙</a>
+                            <a class="nav-link text-dark" href="yaraExecutionPlan.html">YARA 실행 계획</a>
+                            <a class="nav-link text-dark" href="executableFile.html">실행 파일</a>
+                            <a class="nav-link text-dark" href="passwordProtected.html">암호화 파일</a>
+                            <a class="nav-link text-dark" href="urlAnalysis.html">URL 분석</a>
+                            <a class="nav-link text-dark" href="cdr.html">무해화</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            시스템
+                        </a>
+                        <div class="dropdown-menu w-200" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="apiKey.html">API Key</a>
+                            <a class="nav-link text-dark" href="accessControl.html">접근 제어</a>
+                            <a class="nav-link text-dark" href="notificationServer.html">알림 - 서버</a>
+                            <a class="nav-link text-dark" href="notificationTemplate.html">알림 - 템플릿</a>
+                            <a class="nav-link text-dark" href="notificationRecipient.html">알림 - 수신자</a>
+                            <a class="nav-link text-dark" href="syslog.html">Syslog</a>
+                            <a class="nav-link text-dark" href="diskCleanDataBackup.html">디스크 클린 & 데이터 백업</a>
+                            <a class="nav-link text-dark" href="update.html">업데이트</a>
+                            <a class="nav-link text-dark" href="supportTool.html">지원 도구</a>
+                            <a class="nav-link text-dark" href="auditLog.html">감사 로그</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            계정 관리
+                        </a>
+                        <div class="dropdown-menu w-300" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="nav-link text-dark" href="user.html">계정 관리</a>
+                            <a class="nav-link text-dark" href="accessManagement.html">액세스 관리</a>    
+                            <a class="nav-link text-dark" href="tenant.html">테넌트 관리 - 테넌트</a>
+                            <a class="nav-link text-dark" href="tenantAdmin.html">테넌트 관리 - 테넌트 관리자 계정</a>
+                            <a class="nav-link text-dark" href="tenantAccessControl.html">테넌트 관리 - 테넌트 접근 제어</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="col-md-12 mt-4">
+            <h2 class="col-md-12 mb-4">지원 도구</h2>
+            <div class="col-md-12 mb-5">
+                <h5>1. 날짜 범위를 31일 초과로 지정 후 로그 다운로드를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#invalidDateModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#invalidDateModalEn">영문</button>
+            </div>
+            <div class="col-md-12 mb-5">
+                <h5>2. 로그 미선택 후 다운로드를 시도했을 경우 나타나는 알림창</h5>
+                <button type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#noSelectLogsModalKo">한글</button>
+                <button type="button" class="btn btn-dark mt-2 ml-2" data-toggle="modal" data-target="#noSelectLogsModalEn">영문</button>
+            </div>
+        </div>
+
+        <!-- 1. 날짜 범위를 31일 초과로 지정 후 로그 다운로드를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="invalidDateModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">지원 도구</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">올바르지 않은 날짜 범위입니다.</span>
+                            <span>날짜 범위는 31일 이하로 설정할 수 있습니다.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1. 날짜 범위를 31일 초과로 지정 후 로그 다운로드를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="invalidDateModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Support Tool</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon mt-1">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span class="mb-1">Invalid date range.</span>
+                            <span>The date range can be set to less than 31 days.</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 로그 미선택 후 다운로드를 시도했을 경우 나타나는 알림창 - 한글 -->
+        <div class="modal fade" id="noSelectLogsModalKo" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">지원 도구</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>다운로드 할 로그를 선택해주세요.</span>                                
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. 로그 미선택 후 다운로드를 시도했을 경우 나타나는 알림창 - 영문 -->
+        <div class="modal fade" id="noSelectLogsModalEn" data-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Support Tool</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body border-top border-bottom border-warning">
+                        <div class="modal-body__icon">
+                            <i class="fas fa-exclamation-circle text-warning"></i>
+                        </div>
+                        <div class="modal-body__desc">
+                            <span>Please select a log to download.</span>                                
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/b597afdaa1.js" crossorigin="anonymous"></script>
+</body>
+</html>
